@@ -1,6 +1,12 @@
 import React from 'react';
 import House from './House';
 import Outdoors from './Outdoors';
+import styled from 'styled-components';
+
+const Div = styled.div`
+    margin: 40px;
+    padding: 20px;
+`;
 
 export default class App extends React.Component {
     constructor() {
@@ -24,10 +30,10 @@ export default class App extends React.Component {
     render() {
         const wildCats = this.state.cats.filter((cat) => this.state.adoptedCats.indexOf(cat) === -1);
         return (
-            <div>
+            <Div>
                 <House cats={this.state.adoptedCats} />
                 <Outdoors adopt={this.adopt.bind(this)} cats={wildCats} />
-            </div>
+            </Div>
         );
     }
 }
