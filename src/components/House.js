@@ -19,7 +19,6 @@ const Triangle = styled.div`
     border-bottom: 100px solid #ff7272;
 `;
 
-// f5f5f5
 export default class WildCat extends React.Component {
     render() {
         return (
